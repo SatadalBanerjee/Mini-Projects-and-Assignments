@@ -62,5 +62,11 @@ public class BookController {
 		
 		return new ResponseEntity<List<Book>>(lb,HttpStatus.FOUND);
 	}
-	
+	// @DeleteMapping("/book/{id}")
+	// public ResponseEntity<Book> deleteBookHandler(@PathVariable("id") Integer bookId){
+		
+	// 	Book db= bookService.deleteBook(bookId);
+		
+	// 	return new ResponseEntity<Book>(db,HttpStatus.OK);
+	// }
 }
