@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -35,6 +36,7 @@ public class Student {
 	@Embedded
 	private Address addr;
 	
+	@JsonIgnore
 	@ManyToMany(cascade = CascadeType.ALL)
 	private Set<Course> courses= new HashSet<>();
 	
