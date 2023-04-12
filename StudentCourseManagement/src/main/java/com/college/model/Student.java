@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -37,6 +38,7 @@ public class Student {
 	private Address addr;
 	
 	@JsonIgnore
+//	@Transient
 	@ManyToMany(cascade = CascadeType.ALL)
 	private Set<Course> courses= new HashSet<>();
 	
