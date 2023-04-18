@@ -1,0 +1,11 @@
+package com.college.exception;
+
+public class StudentException extends Exception{
+
+	public StudentException() {
+		
+	}
+	public StudentException(String message) {
+		
+	}
+}
