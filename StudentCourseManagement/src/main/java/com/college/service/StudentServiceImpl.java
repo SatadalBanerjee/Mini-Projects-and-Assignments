@@ -1,5 +1,9 @@
 package com.college.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,5 +42,30 @@ public class StudentServiceImpl implements StudentService{
 		
 //		return null;
 	}
+
+	@Override
+	public Set<Student> findStudentsByCourseName(String cname) throws CourseException {
+		// TODO Auto-generated method stub
+		Set<Student> students = cDao.getStudentByCname(cname);
+		
+		if(students.size() > 0) {
+			return students;
+		}
+		else {
+			throw new CourseException("No Course Found");
+		}
+		
+//		return students;
+	}
+
+//	@Override
+//	public List<Student> findStudentsByCourseName(String cname) throws CourseException {
+//		
+//		Set<Student> students = cDao.getStudentByCname(cname);
+//		
+//		List<Student> list = new ArrayList<>(students);
+//		
+//		return list;
+//	}
 
 }
