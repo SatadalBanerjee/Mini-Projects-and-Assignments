@@ -4,3 +4,6 @@
 
 
 ## Description of Projects
+* BlogApp
+* Calculator
+* TextEditor
