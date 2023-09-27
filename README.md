@@ -6,4 +6,8 @@
 ## Description of Projects
 * BlogApp
 * Calculator
+* Company Management
 * TextEditor
+* Mail Masai
+* Masai Calender
+* FIR Application
